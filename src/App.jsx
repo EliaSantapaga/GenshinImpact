@@ -9,6 +9,8 @@ function App() {
     <>
       <AppNavbar />
       <AppFooter />
+      test
+      
     </>
   );
 }
