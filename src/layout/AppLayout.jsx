@@ -1,13 +1,14 @@
 import AppFooter from "../components/AppFooter";
 import AppNavbar from "../components/AppNavbar";
 
-function Home() {
+function AppLayout({ children }) {
   return (
     <>
       <AppNavbar />
+      {children}
       <AppFooter />
     </>
   );
 }
 
-export default Home;
+export default AppLayout;
