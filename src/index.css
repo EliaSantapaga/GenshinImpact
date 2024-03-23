@@ -13,6 +13,11 @@
   flex-direction: column;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 /*//? DETAILS ----------------- */
 
 .black-background {
@@ -83,15 +88,55 @@
 /*//? CHARACTER SLIDER -------- */
 
 .character-slider {
-  height: 200px;
-  /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(1, 1, 1, 0.5)); */
   position: absolute;
   z-index: 9;
   bottom: 0;
   padding-top: 22px;
-  width: 100%;
   height: 190px;
   background: rgba(204, 204, 204, 0.2);
+}
+
+/* .character-slider::after {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: calc(50% - 79vh);
+  display: block;
+  content: '';
+  width: 154vh;
+  height: 52vh;
+  background-size: 154vh 52vh;
+  background: url('./assets/Other/light.f43c391.png') center no-repeat;
+} */
+
+.slider-button {
+  background: none;
+  border: none;
+}
+
+.character-card {
+  background: linear-gradient(
+    rgba(28, 28, 28, 0.4) 40%,
+    rgba(158, 158, 158, 0.5)
+  );
+}
+
+.character-name {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  color: #fff;
+  border-radius: 0 0 5px 5px;
+}
+
+.character-card:hover {
+  background: linear-gradient(rgb(28, 28, 28) 40%, rgb(158, 158, 158));
+  border: 2px solid #fff;
+  .character-name {
+    background-color: #fff;
+    margin: 0;
+    color: #000;
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 /*//? ANIMATION KEYFRAMES ----- */
