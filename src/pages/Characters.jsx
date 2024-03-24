@@ -5,6 +5,7 @@ import monstadt2 from '../assets/Backgrounds/Monstadt-2.jpg';
 import blackBackground from '../assets/Other/BlackBackground.png';
 import LocationSidebar from '../components/LocationSidebar';
 import CharacterSlider from '../components/CharacterSlider';
+import CharacterInfo from '../components/CharacterInfo';
 
 function Characters() {
   const [background, setBackground] = useState(0);
@@ -31,7 +32,14 @@ function Characters() {
         className='black-background'
       />
       <AppLayout>
-        <LocationSidebar />
+        <div className='row'>
+          <div className='col-3'>
+            <LocationSidebar />
+          </div>
+          <div className='col-9'>
+            <CharacterInfo />
+          </div>
+        </div>
         <CharacterSlider />
       </AppLayout>
     </div>

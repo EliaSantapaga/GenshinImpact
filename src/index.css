@@ -1,5 +1,13 @@
 :root {
   --dark-yellow: #ffcf0d;
+  --light-brown: #cca574;
+}
+
+.noto-serif {
+  font-family: 'Noto Serif Telugu', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .space {
@@ -13,6 +21,14 @@
   flex-direction: column;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 ul,
 li {
   list-style: none;
@@ -24,6 +40,22 @@ li {
   height: 100vh;
   width: 100%;
   position: absolute;
+  z-index: 0;
+}
+
+/*//? SCROLL BAR -------------- */
+
+/* Stile generale della barra di scorrimento */
+::-webkit-scrollbar {
+  width: 5px;
+  position: absolute;
+  right: 10px;
+}
+/* Stile del pollice della barra di scorrimento */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 25px;
+  border: solid 4px transparent;
 }
 
 /*//? NAVBAR ------------------ */
@@ -31,6 +63,8 @@ li {
 .navbar {
   height: 60px;
   background-color: rgba(33, 37, 41, 0.9) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  z-index: 99;
 }
 
 .genshin-logo {
@@ -60,7 +94,9 @@ li {
   position: absolute;
   content: '';
   display: block;
-  height: 93.5vh;
+  height: 100vh;
+  margin-top: -6.5vh;
+  margin-left: 33.5px;
   width: 2px;
   background: rgba(255, 255, 255, 0.14);
   box-sizing: border-box;
@@ -68,46 +104,134 @@ li {
 
 .location-sidebar {
   height: 100%;
-}
 
-.location--active {
-  background-image: url('./assets/Other/Location-active.png');
+  padding-left: 0;
 }
 
 .location {
-  height: 60px;
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
   font-size: 22px;
-  margin-left: 19.5px;
-  background: 18px center no-repeat;
-  background-image: url('./asset/Other/Location.png');
-  background-size: 40px;
   color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding-left: 56px;
+  background: 15px center no-repeat;
+  background-size: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url('./assets/Other/Location.png');
+}
+
+.location--active {
+  background: -3px center no-repeat;
+  background-image: url('./assets/Other/Location-active.png');
+  background-size: auto;
+  padding-left: 70px;
+}
+
+/*//? CHARACTER INFO ---------- */
+
+.info-div::before {
+  content: '';
+  background: #fed8a9;
+  height: 4px;
+  width: 200px;
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 60px;
   box-sizing: border-box;
+}
+
+.element-logo {
+  margin-top: -15vh;
+}
+
+.character-name {
+  font-size: 80px;
+  position: relative;
+  z-index: 20;
+}
+
+.va-info-row {
+  padding-left: 12px;
+}
+
+.va-info {
+  background-color: var(--light-brown);
+  position: relative;
+  z-index: 20;
+}
+
+.va-name {
+  padding-bottom: 2px;
+}
+
+.infobox {
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 540px;
+  max-height: 146px;
+  position: relative;
+  z-index: 100;
+}
+
+.infobox::before {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  background-size: 20px;
+  background: url(./assets/Other/Text-before.png);
+}
+
+.infobox-inside {
+  max-height: 130px;
+  width: 470px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.info-text {
+  font-size: 18px;
+  width: 95%;
+}
+
+.character-fullart {
+  height: 100vh;
+  margin-top: -6.5vh;
+  z-index: 7;
+  position: absolute;
 }
 
 /*//? CHARACTER SLIDER -------- */
 
 .character-slider {
   position: absolute;
-  z-index: 9;
+  z-index: 20;
   bottom: 0;
   padding-top: 22px;
   height: 190px;
   background: rgba(204, 204, 204, 0.2);
 }
 
-/* .character-slider::after {
+.character-slide::after {
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   bottom: 0;
   left: calc(50% - 79vh);
   display: block;
   content: '';
-  width: 154vh;
+  width: 155vh;
   height: 52vh;
-  background-size: 154vh 52vh;
+  background-size: 155vh 52vh;
   background: url('./assets/Other/light.f43c391.png') center no-repeat;
-} */
+}
 
 .slider-button {
   background: none;
@@ -121,7 +245,7 @@ li {
   );
 }
 
-.character-name {
+.character-card-name {
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0;
   color: #fff;
@@ -131,7 +255,7 @@ li {
 .character-card:hover {
   background: linear-gradient(rgb(28, 28, 28) 40%, rgb(158, 158, 158));
   border: 2px solid #fff;
-  .character-name {
+  .character-card-name {
     background-color: #fff;
     margin: 0;
     color: #000;

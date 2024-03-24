@@ -7,7 +7,7 @@ function CharacterCard() {
         src={amberProfile}
         alt='Amber profile'
       />
-      <p className='character-name fs-6 text-center py-2'>Amber</p>
+      <p className='character-card-name fs-6 text-center py-2'>Amber</p>
     </div>
   );
 }
