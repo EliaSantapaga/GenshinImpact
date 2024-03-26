@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import logoGenshin from '../assets/Other/Logo-white.png';
+import logoGenshin from '../assets/other/Logo-white.png';
 
 function AppNavbar() {
   const navigate = useNavigate();

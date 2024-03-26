@@ -1,8 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import pyro from "../assets/Elements/Pyro.png";
-import amber from "../assets/Characters/Amber.png";
-import vaBefore from "../assets/Other/VA-before.jpg";
+import pyro from "../assets/elements/Pyro.png";
+import amber from "../assets/characters/Amber.png";
+import vaBefore from "../assets/other/VA-before.jpg";
 import { useState } from "react";
+
+export async function getSingleCharacter() {
+  const response = await fetch("http://localhost:3000");
+  const json = await response.json();
+
+  console.log(json);
+  return json;
+}
 
 function CharacterInfo() {
   const [check, setCheck] = useState(false);
@@ -20,7 +28,7 @@ function CharacterInfo() {
           className="element-logo opacity-25 position-absolute"
         />
         <div className="align-items-center">
-          <h1 className="character-name noto-serif text-white">AMBER</h1>
+          <h1 className="character-name noto-serif text-white m-0">AMBER</h1>
 
           <div className="va-info-row row mb-4">
             <div className="col-9 va-info d-flex p-0">
@@ -37,9 +45,9 @@ function CharacterInfo() {
             </div>
 
             <div className="col-3 center-flex">
-              <label class="switch">
+              <label className="switch">
                 <input type="checkbox" onChange={handleToggleChange} />
-                <span class="slider round" />
+                <span className="slider round" />
               </label>
             </div>
           </div>

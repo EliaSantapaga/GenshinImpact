@@ -1,4 +1,4 @@
-import amberProfile from '../assets/Characters/Profile/Amber-profile.png';
+import amberProfile from '../assets/characters/profile/Amber-profile.png';
 
 function CharacterCard() {
   return (

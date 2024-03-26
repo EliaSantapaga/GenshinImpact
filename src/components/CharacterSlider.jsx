@@ -1,5 +1,5 @@
-import leftButton from '../assets/Other/Left-button.png';
-import rightButton from '../assets/Other/Right-button.png';
+import leftButton from '../assets/other/Left-button.png';
+import rightButton from '../assets/other/Right-button.png';
 import CharacterCard from './CharacterCard';
 
 function CharacterSlider() {

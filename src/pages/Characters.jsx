@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import AppLayout from '../layout/AppLayout';
-import monstadt1 from '../assets/Backgrounds/Monstadt-1.jpg';
-import monstadt2 from '../assets/Backgrounds/Monstadt-2.jpg';
-import blackBackground from '../assets/Other/BlackBackground.png';
+import monstadt1 from '../assets/backgrounds/Monstadt-1.jpg';
+import monstadt2 from '../assets/backgrounds/Monstadt-2.jpg';
+import blackBackground from '../assets/other/BlackBackground.png';
 import LocationSidebar from '../components/LocationSidebar';
 import CharacterSlider from '../components/CharacterSlider';
 import CharacterInfo from '../components/CharacterInfo';
