@@ -1,19 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useContext, useState } from "react";
 import pyro from "../assets/elements/Pyro.png";
 import amber from "../assets/characters/Amber.png";
 import vaBefore from "../assets/other/VA-before.jpg";
-import { useState } from "react";
-
-export async function getSingleCharacter() {
-  const response = await fetch("http://localhost:3000");
-  const json = await response.json();
-
-  console.log(json);
-  return json;
-}
+// import AppContext from "../context/AppContext";
+import { useCharacterContext } from "../context/CharacterContext";
 
 function CharacterInfo() {
   const [check, setCheck] = useState(false);
+  const { characterData } = useCharacterContext();
+  // const { singleCharacter, setSingleCharacter } = useContext(AppContext);
+
+  console.log(characterData);
 
   const handleToggleChange = (event) => {
     setCheck(event.target.checked);
@@ -28,7 +26,9 @@ function CharacterInfo() {
           className="element-logo opacity-25 position-absolute"
         />
         <div className="align-items-center">
-          <h1 className="character-name noto-serif text-white m-0">AMBER</h1>
+          <h1 className="character-name noto-serif text-white m-0">
+            AMBER
+          </h1>
 
           <div className="va-info-row row mb-4">
             <div className="col-9 va-info d-flex p-0">

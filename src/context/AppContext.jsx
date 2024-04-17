@@ -3,10 +3,8 @@ import { createContext } from "react";
 //* Il contesto contiene un oggetto
 
 const AppContext = createContext({
-  loading: true,
-  setLoading: () => {},
-  error: "",
-  setError: () => {},
+  singleCharacter: "",
+  setSingleCharacter: () => {},
 });
 
 export default AppContext;

@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import AppLayout from '../layout/AppLayout';
-import monstadt1 from '../assets/backgrounds/Monstadt-1.jpg';
-import monstadt2 from '../assets/backgrounds/Monstadt-2.jpg';
-import blackBackground from '../assets/other/BlackBackground.png';
-import LocationSidebar from '../components/LocationSidebar';
-import CharacterSlider from '../components/CharacterSlider';
-import CharacterInfo from '../components/CharacterInfo';
+import { useContext, useEffect, useState } from "react";
+import AppLayout from "../layout/AppLayout";
+import monstadt1 from "../assets/backgrounds/Monstadt-1.jpg";
+import monstadt2 from "../assets/backgrounds/Monstadt-2.jpg";
+import blackBackground from "../assets/other/BlackBackground.png";
+import LocationSidebar from "../components/LocationSidebar";
+import CharacterSlider from "../components/CharacterSlider";
+import CharacterInfo from "../components/CharacterInfo";
 
 function Characters() {
   const [background, setBackground] = useState(0);
@@ -14,29 +14,29 @@ function Characters() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setBackground((currentId) => (currentId + 1) % images.length);
-    }, 8000);
+    }, 7000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
     <div
-      className='character-page container-fluid p-0'
+      className="character-page container-fluid p-0"
       style={{
         backgroundImage: `url(${background ? images[0] : images[1]})`,
       }}
     >
       <img
         src={blackBackground}
-        alt='Black background'
-        className='black-background'
+        alt="Black background"
+        className="black-background"
       />
       <AppLayout>
-        <div className='row'>
-          <div className='col-3'>
+        <div className="row">
+          <div className="col-3">
             <LocationSidebar />
           </div>
-          <div className='col-9'>
+          <div className="col-9">
             <CharacterInfo />
           </div>
         </div>
