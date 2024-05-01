@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AppLayout from "../layout/AppLayout";
 import monstadt1 from "../assets/backgrounds/Monstadt-1.jpg";
 import monstadt2 from "../assets/backgrounds/Monstadt-2.jpg";
@@ -17,7 +17,7 @@ function Characters() {
     }, 7000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [images.length]);
 
   return (
     <div

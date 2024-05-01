@@ -1,6 +1,8 @@
 import amberProfile from '../assets/characters/profile/Amber-profile.png';
 
-function CharacterCard() {
+function CharacterCard(
+  // { id }
+  ) {
   return (
     <div className='character-card rounded'>
       <img

@@ -243,7 +243,7 @@ input:checked + .slider:before {
 /* Infobox */
 .infobox {
   background-color: rgba(0, 0, 0, 0.5);
-  max-width: 540px;
+  max-width: 495px;
   max-height: 146px;
   position: relative;
   z-index: 100;
@@ -317,6 +317,7 @@ input:checked + .slider:before {
     rgba(28, 28, 28, 0.4) 40%,
     rgba(158, 158, 158, 0.5)
   );
+  width: 110px;
 }
 
 .character-card-name {
@@ -324,6 +325,8 @@ input:checked + .slider:before {
   margin: 0;
   color: #fff;
   border-radius: 0 0 5px 5px;
+  width: 110px;
+
 }
 
 .character-card:hover {
