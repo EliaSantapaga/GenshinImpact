@@ -259,7 +259,6 @@ input:checked + .slider:before {
   background-size: 20px;
   background: url("./assets/other/Text-before.png");
   position: absolute;
-
 }
 
 .infobox-inside {
@@ -326,18 +325,25 @@ input:checked + .slider:before {
   color: #fff;
   border-radius: 0 0 5px 5px;
   width: 110px;
+}
 
+.border-card {
+  border: 2px solid #ffffff00;
 }
 
 .character-card:hover {
   background: linear-gradient(rgb(28, 28, 28) 40%, rgb(158, 158, 158));
-  border: 2px solid #fff;
+  width: 110px;
+  .border-card {
+    border: 2px solid #fff;
+  }
   .character-card-name {
     background-color: #fff;
     margin: 0;
     color: #000;
     border-radius: 0 0 5px 5px;
   }
+  
 }
 
 /*//? ANIMATION KEYFRAMES ----- */
