@@ -27,8 +27,8 @@ function CharacterSlider() {
           <img
             src={leftButton}
             alt="Previous"
-            class="swiper-button-prev"
-            tabindex="-1"
+            className="swiper-button-prev"
+            tabIndex="-1"
             role="button"
             aria-label="Previous Character"
             aria-controls="swiper-wrapper-8ac752d74ef73fc7"
@@ -77,8 +77,8 @@ function CharacterSlider() {
           <img
             src={rightButton}
             alt="Next"
-            class="swiper-button-next"
-            tabindex="+1"
+            className="swiper-button-next"
+            tabIndex="+1"
             role="button"
             aria-label="Next character"
             aria-controls="swiper-wrapper-8ac752d74ef73fc7"
